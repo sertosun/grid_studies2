@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  display: grid;
+  background-color: gray;
+  height: 400px;
+  padding: 10px;
+  gap: 15px;
+  grid-template-areas:
+    "menu header header header sidebar sidebar"
+    "menu main main main sidebar sidebar"
+    "menu footer footer footer footer footer";
+}
+
+.grid-container > div {
+  background-color: thistle;
+  padding: 10px;
+  display: grid;
+  place-content: center center;
+}
+
+.menu {
+  grid-area: menu;
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.footer {
+  grid-area: footer;
+}
